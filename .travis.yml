@@ -8,9 +8,11 @@ node_js:
 git:
   depth: 3
 script:
+  - yarn test
   - yarn build
 deploy:
   provider: pages
+  edge: true
   skip_cleanup: true
   keep_history: true
   github_token: $GITHUB_TOKEN
